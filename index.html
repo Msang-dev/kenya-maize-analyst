@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7f1">
+    <title>ShambaScope | Kenya maize intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="ShambaScope home">
+          <span class="brand-mark" aria-hidden="true">s</span>
+          <span>shamba<span class="brand-light">scope</span><small>KENYA CROP INTELLIGENCE</small></span>
+        </a>
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="navigation" aria-label="Main navigation">
+          <a class="nav-link active" href="#overview"><span class="nav-icon">▦</span>Overview</a>
+          <a class="nav-link" href="#county-table"><span class="nav-icon">◫</span>County rankings</a>
+          <a class="nav-link" href="#forecast"><span class="nav-icon">⌁</span>Production forecast</a>
+          <a class="nav-link" href="#advisor"><span class="nav-icon">✳</span>Field advisor</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="data-card">
+            <span class="data-card-icon">↗</span>
+            <strong>Your data, your decisions.</strong>
+            <p>Upload county production history to replace the provided historical dataset.</p>
+            <label class="upload-button" for="csv-upload">Import CSV <span>↑</span></label>
+            <input id="csv-upload" type="file" accept=".csv,text/csv" hidden>
+          </div>
+          <div class="sidebar-foot"><span class="status-dot"></span> Kenya · 47 counties <span class="foot-year" id="foot-year">2020</span></div>
+        </div>
+      </aside>
+
+      <main class="main-content" id="main-content">
+        <header class="topbar">
+          <div class="breadcrumb">Kenya <span>/</span> <strong>Maize intelligence</strong></div>
+          <div class="topbar-actions"><span class="demo-badge"><span></span><span id="dataset-badge">HISTORICAL DATA</span></span><button class="icon-button" id="export-button" title="Download county rankings as CSV" aria-label="Download county rankings as CSV">⇩</button><div class="avatar">KS</div></div>
+        </header>
+
+        <section class="view-heading" id="view-heading" hidden aria-live="polite">
+          <div class="eyebrow"><span class="eyebrow-line"></span> KENYA MAIZE INTELLIGENCE</div>
+          <h1 id="view-title"></h1>
+          <p class="intro" id="view-description"></p>
+        </section>
+
+        <section class="page-heading" id="overview">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> NATIONAL AGRICULTURE MONITOR</div>
+            <h1>Maize production,<br><span>in perspective.</span></h1>
+            <p class="intro">A clearer view of where Kenya grows, what comes next, and what to consider in the field.</p>
+          </div>
+          <div class="heading-meta"><span class="live-pulse"></span> NATIONAL OVERVIEW <span class="meta-separator">·</span> 47 COUNTIES</div>
+        </section>
+
+        <section class="stats-grid" aria-label="National summary">
+          <article class="stat-card stat-primary">
+            <div class="stat-top"><span>NATIONAL PRODUCTION</span><span class="stat-icon">◒</span></div>
+            <div class="stat-value" id="stat-production">—</div>
+            <div class="stat-bottom"><span id="stat-production-year">2020</span> <span class="stat-note">provided history <span class="info-dot" title="User-provided spreadsheet; its original source is not identified in the workbook.">i</span></span></div>
+            <div class="sparkline" aria-hidden="true"><svg viewBox="0 0 120 30"><path d="M1 22 C12 25 14 15 24 18 S38 8 48 15 S60 21 70 11 S83 15 91 8 S104 13 119 2" /></svg></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>COUNTIES TRACKED</span><span class="stat-icon stat-icon-soft">⌖</span></div>
+            <div class="stat-value" id="stat-counties">47</div>
+            <div class="stat-bottom"><span class="positive-dot"></span> All Kenyan counties</div>
+            <div class="stat-subline">One national picture</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>TOP PRODUCING COUNTY</span><span class="stat-icon stat-icon-soft">↗</span></div>
+            <div class="stat-value stat-county" id="stat-top-county">—</div>
+            <div class="stat-bottom"><span id="stat-top-volume">—</span> <span class="stat-note">in <span id="stat-top-year">2025</span></span></div>
+            <div class="stat-subline">By estimated production</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>2030 OUTLOOK</span><span class="stat-icon stat-icon-soft">⌁</span></div>
+            <div class="stat-value" id="stat-outlook">—</div>
+            <div class="stat-bottom"><span class="forecast-tag">TREND MODEL</span> <span class="stat-note">vs. 2012</span></div>
+            <div class="stat-subline">Scenario, not a guarantee</div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel forecast-panel" id="forecast">
+            <div class="panel-heading">
+              <div><div class="section-kicker">LOOKING AHEAD <span class="tiny-spark">↗</span></div><h2>Production trajectory</h2><p class="panel-subtitle" id="chart-period">Observed history · 2012–2020</p></div>
+              <label class="select-wrap"><span class="sr-only">Forecast view</span><select id="chart-mode"><option value="tonnes">Production (tonnes)</option><option value="growth">Year-on-year change</option></select><span>⌄</span></label>
+            </div>
+            <div class="chart-legend"><span><i class="legend-dot actual-dot"></i> Historical estimate</span><span><i class="legend-dot forecast-dot"></i> Trend forecast</span><span class="chart-unit" id="chart-unit">TONNES</span></div>
+            <div class="chart-wrap"><svg id="production-chart" role="img" aria-label="Line chart of historical and forecast maize production"></svg></div>
+            <div class="chart-footer"><span><i class="legend-band"></i> Illustrative ±5.5% band · not a confidence interval</span><span id="forecast-method">Linear trend · 2021–2030</span></div>
+          </article>
+
+          <article class="panel county-panel" id="county-table">
+            <div class="panel-heading ranking-heading">
+              <div><div class="section-kicker">THE COUNTY PICTURE</div><h2>Production ranking</h2><p class="panel-subtitle">Compare output across the country</p></div>
+              <label class="select-wrap year-select"><span class="sr-only">Ranking year</span><select id="ranking-year"></select><span>⌄</span></label>
+            </div>
+            <div class="table-tools"><label class="search-box"><span>⌕</span><input id="county-search" type="search" placeholder="Find a county..." aria-label="Find a county"></label><span class="table-count" id="table-count">47 counties</span></div>
+            <div class="table-scroll"><table><thead><tr><th>RANK</th><th>COUNTY</th><th>PRODUCTION</th><th>SHARE</th></tr></thead><tbody id="county-rows"></tbody></table></div>
+            <div class="table-footer"><span id="table-showing">Showing top counties</span><button id="show-all" class="text-button">View all 47 <span>→</span></button></div>
+          </article>
+        </section>
+
+        <section class="advisor-section" id="advisor">
+          <div class="advisor-title">
+            <div><div class="section-kicker">FROM INSIGHT TO ACTION <span class="tiny-spark">✳</span></div><h2>Your county field advisor</h2><p>Use your local weather outlook and soil test to explore starting points for the season.</p></div>
+            <span class="advisor-badge">GUIDANCE · NOT A PRESCRIPTION</span>
+          </div>
+          <div class="history-imports" aria-label="Import field history">
+            <div class="history-import">
+              <div><strong>Rainfall history CSV</strong><span id="weather-data-status">No history loaded</span></div>
+              <label class="history-upload" for="weather-upload">Import CSV</label>
+              <input id="weather-upload" type="file" accept=".csv,text/csv" hidden>
+            </div>
+            <div class="history-import">
+              <div><strong>Soil report / sample history</strong><span id="soil-data-status">No history loaded</span></div>
+              <label class="history-upload" for="soil-upload">Import CSV</label>
+              <input id="soil-upload" type="file" accept=".csv,text/csv" hidden>
+            </div>
+          </div>
+          <div class="weather-source-card">
+            <div class="weather-source-heading">
+              <strong>Kenya Meteorological Department</strong>
+              <span>KMD says climate maprooms provide daily/dekadal data by county, ward, or grid. Use the source to verify data and forecasts before entering a rainfall outlook.</span>
+            </div>
+            <div class="weather-source-links">
+              <a href="https://meteo.go.ke/mapviewer/" target="_blank" rel="noopener noreferrer">MapViewer ↗</a>
+              <a href="https://meteo.go.ke/Services/agrometeorology/" target="_blank" rel="noopener noreferrer">10-day agromet bulletins ↗</a>
+              <a href="https://meteo.go.ke/Services/climate-data-management/" target="_blank" rel="noopener noreferrer">Climate data service ↗</a>
+              <a href="https://meteo.go.ke/documents/5546/AGROMET_BULLETIN_DEKAD_30_2026.pdf" target="_blank" rel="noopener noreferrer">Source bulletin (PDF) ↗</a>
+              <a href="./kmd-rainfall-observations-2026-10.csv" download>Download saved KMD rainfall CSV ↓</a>
+            </div>
+            <p id="kmd-rainfall-note">Saved KMD station observations are shown by selected county where available. Station readings are not county averages; the outlook selector below is manual, not a live KMD forecast.</p>
+          </div>
+          <div class="external-soil-source">
+            <div><strong>ShambaIQ county soil estimate</strong><span>Satellite/model-based county information, not an individual farm soil sample.</span></div>
+            <a id="soil-source-link" href="https://shambaiq.com/soil/trans-nzoia/maize" target="_blank" rel="noopener noreferrer">Open maize report ↗</a>
+          </div>
+          <div class="advisor-card">
+            <div class="advisor-form">
+              <label class="field-label" for="advisor-county">COUNTY</label>
+              <div class="field-select"><select id="advisor-county"></select><span>⌄</span></div>
+              <div class="field-row">
+                <label><span class="field-label">SEASONAL RAINFALL OUTLOOK</span><span class="field-select"><select id="rainfall"><option value="low">Below average</option><option value="normal" selected>Near average</option><option value="high">Above average</option></select><span>⌄</span></span></label>
+                <label><span class="field-label">SOIL TEST / HISTORY</span><span class="field-select"><select id="soil"><option value="unknown" selected>Not available</option><option value="low-n">Low nitrogen</option><option value="low-p">Low phosphorus</option><option value="acidic">Acidic soil</option><option value="balanced">Balanced soil</option></select><span>⌄</span></span></label>
+              </div>
+              <button class="recommend-button" id="recommend-button">Generate field notes <span>→</span></button>
+            </div>
+            <div class="advisor-output" id="advisor-output" aria-live="polite">
+              <div class="output-placeholder"><span class="output-icon">✳</span><div><strong>Good decisions start with local context.</strong><p>Select a county and add the latest rainfall outlook and soil test history to get a practical starting point.</p></div></div>
+              <div class="output-disclaimer"><span>ⓘ</span> Seed and fertilizer choices depend on certified local varieties, soil-test results, planting date, and extension advice. Uploaded records remain in this session.</div>
+              <div id="history-context" class="history-context" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+        <footer class="page-footer"><span>SHAMBASCOPE <span class="footer-divider">/</span> KENYA MAIZE MONITOR</span><span id="data-source-note">Provided workbook · metric tonnes · 2012–2020</span></footer>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="production-data.js"></script>
+    <script src="kmd-rainfall-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

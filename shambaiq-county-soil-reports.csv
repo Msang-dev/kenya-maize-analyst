@@ -1,0 +1,48 @@
+county,report_date,ph,nitrogen_g_kg,phosphorus_mg_kg,potassium_mg_kg,reported_score,source_type
+Tana River,,6.4,1.04,8.5,,77,ShambaIQ county estimate; user-provided; report date unavailable
+Garissa,,7.96,0.61,37.7,,57,ShambaIQ county estimate; user-provided; report date unavailable
+Turkana,,7.95,0.41,38.5,,50,ShambaIQ county estimate; user-provided; report date unavailable
+Marsabit,,8.22,0.52,37.3,,49,ShambaIQ county estimate; user-provided; report date unavailable
+Samburu,,8.28,0.67,42.1,,48,ShambaIQ county estimate; user-provided; report date unavailable
+Wajir,,8.4,0.52,39.3,,44,ShambaIQ county estimate; user-provided; report date unavailable
+Mandera,,8.38,0.53,38.3,,43,ShambaIQ county estimate; user-provided; report date unavailable
+Nairobi,,6.85,1.1,22.1,,89,ShambaIQ county estimate; user-provided; report date unavailable
+Nyandarua,,5.38,1.28,14,,71,ShambaIQ county estimate; user-provided; report date unavailable
+Kirinyaga,,5.31,1.36,12.5,,69,ShambaIQ county estimate; user-provided; report date unavailable
+Nyeri,,5.23,1.09,15.5,,68,ShambaIQ county estimate; user-provided; report date unavailable
+Kiambu,,5.28,1.01,13.7,,67,ShambaIQ county estimate; user-provided; report date unavailable
+Tharaka-Nithi,,4.99,1.23,19.6,,66,ShambaIQ county estimate; user-provided; report date unavailable
+Meru,,4.88,1.22,20.3,,64,ShambaIQ county estimate; user-provided; report date unavailable
+Embu,,5.1,1.04,12.6,,63,ShambaIQ county estimate; user-provided; report date unavailable
+Murang'a,,5.03,1.2,12.2,,62,ShambaIQ county estimate; user-provided; report date unavailable
+Taita-Taveta,,6.64,0.97,12.9,,80,ShambaIQ county estimate; user-provided; report date unavailable
+Kwale,,6.76,0.93,9.8,,79,ShambaIQ county estimate; user-provided; report date unavailable
+Mombasa,,6.24,0.95,8.4,,79,ShambaIQ county estimate; user-provided; report date unavailable
+Lamu,,6.31,0.74,9.6,,75,ShambaIQ county estimate; user-provided; report date unavailable
+Kilifi,,6.24,0.8,11,,74,ShambaIQ county estimate; user-provided; report date unavailable
+Kisumu,,5.54,0.91,12.5,,71,ShambaIQ county estimate; user-provided; report date unavailable
+Migori,,5.43,1.2,12.2,,71,ShambaIQ county estimate; user-provided; report date unavailable
+Busia,,5.29,0.91,16.6,,69,ShambaIQ county estimate; user-provided; report date unavailable
+Homa Bay,,5.27,1.05,13.8,,66,ShambaIQ county estimate; user-provided; report date unavailable
+Siaya,,5.33,1.2,12.1,,66,ShambaIQ county estimate; user-provided; report date unavailable
+Uasin Gishu,,6.39,1.56,25.3,,93,ShambaIQ county estimate; user-provided; report date unavailable
+Nakuru,,6.28,1.59,25.2,,92,ShambaIQ county estimate; user-provided; report date unavailable
+Baringo,,6.22,1.32,23.4,,91,ShambaIQ county estimate; user-provided; report date unavailable
+Elgeyo-Marakwet,,6.27,1.39,22.2,,91,ShambaIQ county estimate; user-provided; report date unavailable
+Narok,,6.13,1.63,25.7,,91,ShambaIQ county estimate; user-provided; report date unavailable
+Bomet,,6.02,1.38,23.6,,89,ShambaIQ county estimate; user-provided; report date unavailable
+West Pokot,,6.04,1.67,24.8,,89,ShambaIQ county estimate; user-provided; report date unavailable
+Kericho,,5.94,1.34,23.7,,87,ShambaIQ county estimate; user-provided; report date unavailable
+Laikipia,,4.99,1.42,16.6,,66,ShambaIQ county estimate; user-provided; report date unavailable
+Kajiado,,6.55,0.97,20.6,,89,ShambaIQ county estimate; user-provided; report date unavailable
+Machakos,,7.03,0.82,31.4,,80,ShambaIQ county estimate; user-provided; report date unavailable
+Kitui,,7.03,0.74,30.5,,78,ShambaIQ county estimate; user-provided; report date unavailable
+Makueni,,7.5,0.86,29.6,,69,ShambaIQ county estimate; user-provided; report date unavailable
+Isiolo,,7.83,0.46,37.4,,56,ShambaIQ county estimate; user-provided; report date unavailable
+Nandi,,6.17,1.37,26.4,,91,ShambaIQ county estimate; user-provided; report date unavailable
+Trans Nzoia,,5.93,1.68,27.3,,88,ShambaIQ county estimate; user-provided; report date unavailable
+Bungoma,,5.56,1.12,15.7,,75,ShambaIQ county estimate; user-provided; report date unavailable
+Kakamega,,5.63,1.01,14,,75,ShambaIQ county estimate; user-provided; report date unavailable
+Vihiga,,5.62,1.02,14.8,,75,ShambaIQ county estimate; user-provided; report date unavailable
+Nyamira,,5.58,0.84,11.6,,70,ShambaIQ county estimate; user-provided; report date unavailable
+Kisii,,5.21,1.09,13.1,,65,ShambaIQ county estimate; user-provided; report date unavailable
